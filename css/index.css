@@ -5,6 +5,10 @@
     --Cblanco:#F2F2F2;
     --Cclarito:#ffdebd;
 }
+main{
+    background: #2b002e;
+    transition: .8s;
+}
 .navbar {
     background: #280c35;
 }
@@ -33,7 +37,6 @@ header .nav-link:focus{
 }
 article {
     background: #2b002e;
-    height: 1000px;
     color: var(--Cblanco);
     transition: .8s;
 }
@@ -196,20 +199,14 @@ article > h1{
 .oscuro header .dropdown-item{
     color: var(--Coscuro);
 }
-
-
-/* video{
-    position: fixed;
-    z-index: -10;
-    width: 100%;
-    filter: blur(1px);
-#181818
-#8758FF
-#5CB8E4
-#F2F2F2
-
+.oscuro main{
+    background:#ff723c ;
 }
- */
+.division{
+    margin-bottom: 15em;
+}
+
+
 
 @media (max-width:780px) {
     article{
@@ -219,7 +216,7 @@ article > h1{
         padding-top: 13em ;
     }
     .abajo{
-        padding-bottom: 41em;
+        padding-bottom: 45em;
     }
 }
 @media (max-width:320px) {
