@@ -1,0 +1,232 @@
+:root{
+    --Cprincipal:#5CB8E4;
+    --Csecundario:#8758FF;
+    --Coscuro:#181818;
+    --Cblanco:#F2F2F2;
+    --Cclarito:#ffdebd;
+}
+main{
+    background: #2b002e;
+    transition: .8s;
+}
+.navbar {
+    background: #280c35;
+}
+header .nav-link{
+    color: var(--Cblanco);
+}
+header .dropdown-menu{
+    background:#280c35;
+}
+header .dropdown-item:hover{
+    background: var(--Cprincipal);
+}
+header .dropdown-item{
+    color: var(--Cblanco);
+}
+header .nav-link:hover{
+    color: var(--Cprincipal);
+}
+header .nav-link:focus{
+    color: var(--Cprincipal);
+}
+
+.dinosaurio {
+    padding-top: 2em;
+    height: 500px;
+}
+article {
+    background: #2b002e;
+    color: var(--Cblanco);
+    transition: .8s;
+}
+
+.dinodos {
+    width: 350px;
+    z-index: 2;
+    position: absolute;
+}
+
+.dinouno {
+    width: 350px;
+    z-index: 2;
+    position: absolute;
+}
+
+.fondodinos {
+    width: 350px;
+    z-index: 1;
+    position: absolute;
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    --background: #8758FF;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #f37a4e;
+    transition: .5s;
+}
+
+input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+
+.oscuro nav{
+    background: #ffdebd;
+    transition: .20s;
+}
+.oscuro button:hover{
+    background: #8758FF;
+}
+.oscuro button{
+    border: #8758FF 1px solid;
+    color: var(--Cblanco);
+}
+.oscuro button:hover{
+    border: #8758FF 1px solid;
+}
+.oscuro form input[type="text"]:focus, .oscuro form input[type="text"]:hover {
+    border-color: #8758FF;
+    box-shadow: 0 0 0 2px rgba(135, 88, 255, 0.603);
+    transition: .8s;
+}
+
+.oscuro article{
+    background: #ff723c;
+    color: #181818;
+}
+.oscuro header{
+    color: #181818;
+}
+.alt{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px ;
+    overflow: hidden ;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.oscuro .alt{
+    position: unset;
+    width: unset;
+    padding:unset;
+    margin:unset;
+    overflow: unset;
+    clip: unset;
+    white-space: unset;
+    border: unset;
+}
+.oscuro .altPr{
+    visibility: hidden;
+    position: fixed;
+}
+div > h3{
+    border-bottom: 4px solid #5CB8E4; 
+}
+.oscuro div > h3 {
+    border-bottom: 4px solid #8758FF;
+}
+.dinosaurio a{
+    border: 1px solid #8758FF;
+    background: #8758FF;
+}
+.oscuro .dinosaurio a:hover{
+    border: 1px solid #181818;
+    background: #181818;
+    color: var(--Cblanco);
+    transition: .4s;
+}
+article > h1{
+    border-bottom: 1px solid #5CB8E4;
+}
+.oscuro article > h1{
+    border-bottom: 1px solid #8758FF;
+}
+.oscuro header .nav-link{
+    color: #181818;
+}
+.oscuro header .nav-link:hover{
+    color: #8758FF;
+}
+.oscuro header .dropdown-menu{
+    background:var(--Cclarito);
+}
+.oscuro header .dropdown-item:hover{
+    background: var(--Csecundario);
+}
+.oscuro header .dropdown-item{
+    color: var(--Coscuro);
+}
+.oscuro main{
+    background:#ff723c ;
+}
+.division{
+    margin-bottom: 15em;
+}
+
+
+
+@media (max-width:780px) {
+    article{
+        height: 2200px;
+    }
+    .bug{
+        padding-top: 13em ;
+    }
+    .abajo{
+        padding-bottom: 45em;
+    }
+}
+@media (max-width:320px) {
+    article{
+        height: 2300px;
+    }
+    .bug{
+        padding-top: 10em ;
+    }
+    .abajo{
+        padding-bottom: 44em;
+    }
+}
