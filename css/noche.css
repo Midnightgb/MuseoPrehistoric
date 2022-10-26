@@ -1,0 +1,98 @@
+.oscuro{
+    background-color: #111111;
+    transition: 2s;
+}
+.oscuro .h3{
+    color: #ffffff;
+    transition: 2s;
+}
+.oscuro .CC{
+    color: #ffffff;
+    transition: 2s;
+    transition: ease-out 2s;
+}
+.oscuro .form-signin input[type="password"]:focus, .oscuro .form-signin input[type="password"] {
+    color: #ffffff;
+    background: #181818;
+    border-color: #8758FF;
+    transition: 2s;
+}
+.oscuro .form-signin input[type="email"]:focus, .oscuro .form-signin input[type="email"]{
+    color: #ffffff;
+    background: #181818;
+    border-color: #8758FF;
+    transition: 2s;
+}
+.oscuro .form-signin{
+    color: #ffffff;
+    transition: 2s;
+}
+.oscuro .popover-body{
+    background-color: #181818;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: 2s;
+}
+.oscuro div button, .oscuro div a{
+    background: #181818;
+    color: white;
+    border-color:#181818;
+    transition: 2s;
+}
+.oscuro div button:hover, .oscuro div a:hover {
+    background: #444444;
+    color: white;
+    border-color:#444444;
+    transition: .5s;
+}
+.oscuro #_checkbox:checked+label{
+    background: #181818;
+    transition: 2s;
+}
+.oscuro .modal-footer button{
+    background: #af0303;    
+    transition: .5s;
+}
+.oscuro .modal-footer button:hover{
+    background: #e40505;
+    transition: .5s;
+}
+.oscuro .modal-footer .btn-guardar:hover{
+    background: #009c15;
+    transition: .5s;
+}
+.oscuro .modal-footer .btn-guardar{
+    background: #005f0d;
+    transition: .5s;
+}
+.oscuro .modal-content, .oscuro .modal-content input,.oscuro .modal-content select{
+    background: #181818;
+    color: white;
+}
+.oscuro .modal-content input:hover{
+    color: #ffffff;
+    background: #181818;
+    border-color: #8758FF;
+}
+.oscuro .modal-content input:focus{
+    outline: none;
+    border-color: #8758ff8f;
+    box-shadow: 0 0 0 5px #8758ff73;
+}
+.oscuro .modal-content select:hover{
+    color: #ffffff;
+    background: #181818;
+    border-color: #8758FF;
+}
+.oscuro .modal-content select:focus{
+    outline: none;
+    border-color: #8758ff8f;
+    box-shadow: 0 0 0 5px #8758ff73;
+}
+
+
+.night {
+    background: none;
+    padding: 2em 0;
+    border: 0;
+}
