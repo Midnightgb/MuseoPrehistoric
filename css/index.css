@@ -5,7 +5,7 @@
     --Cblanco:#F2F2F2;
     --Cclarito:#ffdebd;
 }
-main{
+html,main{
     background: #2b002e;
     transition: .8s;
 }
@@ -207,24 +207,21 @@ article > h1{
 }
 
 
+@media (max-width:991px) {
 
-@media (max-width:780px) {
-    article{
-        height: 2200px;
-    }
     .bug{
         padding-top: 13em ;
+        padding-bottom: 30em;
     }
     .abajo{
-        padding-bottom: 45em;
+        padding-bottom: 35em;
     }
 }
-@media (max-width:320px) {
-    article{
-        height: 2300px;
-    }
+@media (max-width:767px) {
+
     .bug{
         padding-top: 10em ;
+        padding-bottom: 30em;
     }
     .abajo{
         padding-bottom: 44em;
