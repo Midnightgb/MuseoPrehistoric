@@ -1,3 +1,25 @@
+:root {
+    --Cprincipal: #5CB8E4;
+    --Csecundario: #8758FF;
+    --Coscuro: #181818;
+    --Cblanco: #F2F2F2;
+    --Cclarito: #ffdebd;
+}
+
+article {
+    background: #2b002e;
+    color: var(--Cblanco);
+    transition: .8s;
+}
+
+.era {
+    border-bottom: 3px solid #5CB8E4;
+    margin-bottom: .5em;
+}
+.botonalt{
+    margin-top: 2em;
+    z-index: 5;
+}
 .like {
     padding: 0 20px 0 10px;
     border-radius: 10px;

@@ -39,7 +39,7 @@
 }
 
 input:checked+.slider {
-    background-color: #f37a4e;
+    background-color: #ff4400;
     transition: .5s;
 }
 

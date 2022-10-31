@@ -22,6 +22,9 @@
     box-shadow: 0 0 0 2px rgba(135, 88, 255, 0.603);
     transition: .8s;
 }
+.oscuro div>h3 {
+    border-bottom: 4px solid #8758FF;
+}
 
 .oscuro article {
     background: #ff723c;
