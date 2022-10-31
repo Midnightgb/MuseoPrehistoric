@@ -1,0 +1,99 @@
+.oscuro nav {
+    background: #ffdebd;
+    transition: .20s;
+}
+
+.oscuro button:hover {
+    background: #8758FF;
+}
+
+.oscuro button {
+    border: #8758FF 1px solid;
+    color: var(--Cblanco);
+}
+
+.oscuro button:hover {
+    border: #8758FF 1px solid;
+}
+
+.oscuro form input[type="text"]:focus,
+.oscuro form input[type="text"]:hover {
+    border-color: #8758FF;
+    box-shadow: 0 0 0 2px rgba(135, 88, 255, 0.603);
+    transition: .8s;
+}
+
+.oscuro article {
+    background: #ff723c;
+    color: #181818;
+}
+
+.oscuro header {
+    color: #181818;
+}
+.oscuro .alt {
+    position: unset;
+    width: unset;
+    padding: unset;
+    margin: unset;
+    overflow: unset;
+    clip: unset;
+    white-space: unset;
+    border: unset;
+}
+
+.oscuro .altPr {
+    visibility: hidden;
+    position: fixed;
+}
+.oscuro .dinosaurio a:hover {
+    border: 1px solid #181818;
+    background: #181818;
+    color: var(--Cblanco);
+    transition: .4s;
+}
+.oscuro .era {
+    border-bottom: 3px solid #8758FF;
+}
+
+.oscuro header .nav-link {
+    color: #181818;
+}
+
+.oscuro header .nav-link:hover {
+    color: #8758FF;
+}
+
+.oscuro header .dropdown-menu {
+    background: var(--Cclarito);
+}
+
+.oscuro header .dropdown-item:hover {
+    background: var(--Csecundario);
+}
+
+.oscuro header .dropdown-item {
+    color: var(--Coscuro);
+}
+
+.oscuro .melo,
+.oscuro main {
+    background: #ff723c;
+}
+.oscuro .carousel-control-next, .oscuro .carousel-control-prev{
+    border: none;
+}
+.oscuro .carousel-control-next:hover, .oscuro .carousel-control-prev:hover{
+    border: none;
+    background:none;
+}
+.oscuro .accordion-button,
+.oscuro .accordion-button:hover {
+    border: none;
+    color: var(--Coscuro);
+}
+
+.oscuro .accordion-item,
+.oscuro .accordion-button {
+    background: var(--Cclarito) !important;
+}

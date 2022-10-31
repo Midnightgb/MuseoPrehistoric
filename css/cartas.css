@@ -1,0 +1,27 @@
+.img-toast{
+    width: 15%;
+}
+.atributosD{
+    margin-bottom: -1%;
+}
+.dinoEle{
+    color: var(--Cblanco);
+}
+.oscuro .dinoEle{
+    color: var(--Coscuro);
+}
+.cartas > div{
+    background: var(--Csecundario);
+    color: var(--Coscuro);
+}
+.oscuro .cartas > div{
+    background: var(--Cclarito);
+}
+.cartas-ind{
+    transition: all .2s;
+}
+.cartas-ind:hover{
+    transform: scale(.98);
+    box-shadow: 0px 0px 15px 1px var(--Cprincipal);
+    border-radius: 20px;
+}
