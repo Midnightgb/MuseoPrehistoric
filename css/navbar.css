@@ -1,0 +1,41 @@
+:root {
+    --Cprincipal: #5CB8E4;
+    --Csecundario: #8758FF;
+    --Coscuro: #181818;
+    --Cblanco: #F2F2F2;
+    --Cclarito: #ffdebd;
+}
+
+main,
+html {
+    background: #2b002e;
+    transition: .8s;
+}
+
+.navbar {
+    background: #280c35;
+}
+
+header .nav-link {
+    color: var(--Cblanco);
+}
+
+header .dropdown-menu {
+    background: #280c35;
+}
+
+header .dropdown-item:hover {
+    background: var(--Cprincipal);
+}
+
+header .dropdown-item {
+    color: var(--Cblanco);
+}
+
+header .nav-link:hover {
+    color: var(--Cprincipal);
+}
+
+header .nav-link:focus {
+    color: var(--Cprincipal);
+}

@@ -1,0 +1,122 @@
+footer{
+    color: var(--Cblanco);
+    background: var(--Coscuro);
+}
+.oscuro footer{
+    background:  var(--Cclarito);
+    color: var(--Coscuro);
+}
+
+
+.enlace {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--Cprincipal);
+}
+.oscuro .enlace{
+    color: var(--Csecundario);
+}
+.img-profile {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.linea {
+    height: 80px;
+    width: 1px;
+    padding: 25px 40px 0;
+    vertical-align: top;
+    background: var(--Coscuro);
+}
+
+.ml7 {
+    position: relative;
+    font-size: 1em;
+}
+
+.ml7 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    min-height: 50px;
+    max-width: 150px;
+    padding: 0 1rem;
+    color: var(--Cblanco);
+    font-size: 15px;
+    border: 1px solid var(--Cprincipal);
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+.oscuro .input{
+    color: var(--Coscuro);
+}
+.button--submit {
+    min-height: 50px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: var(--Cprincipal);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+    background-color: var(--Csecundario);
+}
+.borde{
+    border-bottom: 3px solid var(--Cprincipal);
+}
+.oscuro .borde{
+    border-color: var(--Csecundario);
+}
+.input:focus,
+.input:focus-visible {
+    border-color: var(--Csecundario);
+    outline: none;
+}
+
+.oscuro .input {
+    border: 1px solid var(--Csecundario);
+}
+
+.oscuro .button--submit {
+    background: var(--Csecundario);
+}
+
+.oscuro .button--submit:hover {
+    background: var(--Cprincipal);
+}
+
+.oscuro .input:focus,
+.oscuro .input:focus-visible {
+    border-color: var(--Cprincipal);
+    outline: none;
+}
+
+@media (max-width:767px){
+    .bordediv{
+        border: none;
+    }
+    .img-profile{
+        width:30% !important;
+    }
+}

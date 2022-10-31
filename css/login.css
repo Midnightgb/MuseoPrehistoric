@@ -13,7 +13,6 @@ body {
     background-image: url(../assets/img/login/blobanimation.svg);
     background-repeat: none;
     background-size: cover;
-    transition: 2s;
 }
 
 .noselect {
@@ -33,7 +32,6 @@ body {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    transition: 2s;
 }
 
 .form-signin input[type="email"]:hover,
@@ -50,7 +48,6 @@ body {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    transition: 2s;
 }
 
 .form-signin input[type="password"]:hover,

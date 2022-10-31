@@ -1,307 +1,1011 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Museo de la prehistoria</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon/world.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon/edificio-antiguo-y-elegante-con-columnas.png">
 
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/fuente.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="scss/custom.css">
-    <link rel="stylesheet" href="modulos/animate.css/animate.css">
-    <link rel="stylesheet" href="css/noche.css">
-
+    <link rel="stylesheet" href="modulos/aos/dist/aos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
-<body class="text-center">
-    <main class="form-signin w-100 m-auto animate__animated animate__bounceIn animate__fast">
-        <form action="home.html" class="f-principal">
-            <h1 class="h3 mb-3 fw-normal noselect">Inicio de sesion</h1>
-            <button type="button" class="night" onclick="cambiarModo()">
-                <img class="mb-4 noselect animate__animated animate__heartBeat animate__delay-2s animate__slower"
-                    tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Dame click! ;)"
-                    src="assets/img/login/icono-inicio.svg" alt="" width="300" height="250">
-            </button>
-
-            <div class="form-floating f-italic">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email" required>
-                <label for="floatingInput">Email</label>
+<body class="f-principal">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+        </symbol>
+    </svg>
+    <div class="loader Nerd" id="loader">
+        <div class="loader">
+            <div class="scanner">
+                <h1>Cargando...</h1>
             </div>
-
-            <div class="form-floating f-italic">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
-                <label for="floatingPassword">Contraseña</label>
+        </div>
+    </div>
+    <header class="border-bottom">
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <div class="container">
+                <img src="assets/img/icon/icono-navbar.svg" width="60" class="me-5" alt="logo brand">
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <label class="switch">
+                                <input type="checkbox" onclick="cambiarModo()">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" href="#" aria-current="page">Era Mesozoica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Cretacico.html">Cretácico</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Cuenta</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="login.html">Iniciar Sesion</a>
+                                <a class="dropdown-item" href="#">accion 1</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-sm-2" type="text" placeholder="Buscar">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
+        </nav>
 
-            <div class="checkbox my-3">
-                <input checked="" type="checkbox" id="_checkbox"> Recuerdame
-                <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                </label>
-            </div>
+    </header>
+    <div>
+        <img src="assets/img/dinos/claro.jpg" class="img-fluid w-100 alt" alt="">
+        <img src="assets/img/dinos/oscuro.jpg" class="img-fluid w-100 altPr" alt="">
+    </div>
 
-            <div class="row">
-                <button class="btn btn-md btn-primary col-5 me-5" type="submit">Iniciar</button>
-                <button type="button" class="btn btn-md btn-primary col-5 ms-1" data-bs-toggle="modal"
-                    data-bs-target="#modalId">Crear cuenta</button>
-            </div>
-            <p class="mt-5 mb-3 fw-bold CC">&copy; ADSO 2022 &#45; 2024</p>
-        </form>
-    </main>
-    <section>
-        <div class="modal fade" id="modalId" tabindex="-2" role="dialog" aria-labelledby="modalTitleId"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <form>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">Registrarte</h5>
+    <main class="container-fluid px-5 pb-5">
+        <!--<video src="assets/video/fondo.mp4" autoplay loop muted></video>-->
+        <article class="">
+            <section>
+                <h1 class="d-flex justify-content-center pt-5 fs-2">Era Mesozoica</h1>
+                <p>El Mesozoico, era mesozoica o era secundaria, conocido zoológicamente como la era de los dinosaurios
+                    o botánicamente como la era de las cícadas, es una división de la escala temporal geológica que
+                    pertenece al eón Fanerozoico; dentro de este, el Mesozoico sigue al Paleozoico y precede al
+                    Cenozoico, de ahí su nombre, que procede del griego μεσο que significa "entre", y ζώον, que
+                    significa "de los animales" que significa "vida intermedia". Se inició hace 251 millones de años y
+                    finalizó hace 66 millones de años.
+
+                    Durante estos 185 millones de años no se produjeron grandes episodios orogénicos. Pangea se
+                    fragmenta gradualmente y los continentes van desplazándose hacia su posición actual. El clima fue
+                    excepcionalmente cálido durante todo el período, desempeñando un papel importante en la evolución y
+                    la diversificación de nuevas especies animales.
+
+                    Los invertebrados característicos de este período fueron los amonites, cefalópodos de fragmocono con
+                    forma espiral, y los belemnites, más pequeños y con el rostro interno, alargado y puntiagudo, además
+                    de equinodermos, braquiópodos y crustáceos. Se desarrollaron ampliamente los vertebrados, sobre todo
+                    los reptiles. En esta era aparecen también los mamíferos, las aves y las angiospermas o plantas con
+                    flores. Sin embargo, los dinosaurios no son los únicos animales que prosperaron durante toda esta
+                    era, también los peces y otros reptiles, como las tortugas, un ejemplo es Archelon, o los
+                    cocodrilos, de los que algunos alcanzaron gran tamaño, como Sarcosuchus o Deinosuchus.</p>
+            </section>
+            <div class="row division">
+                <div class="col-md-6 col-lg-4 col-sm-12 dinosaurio abajo ">
+                    <h3 class="d-flex justify-content-center mb-3">Cretácico</h3>
+                    <p>El Cretácico, o Cretáceo, es una división de la escala temporal geológica que pertenece a la Era
+                        Mesozoica; dentro de esta, el Cretácico ocupa el tercer y último lugar siguiendo al Jurásico.
+                        Comenzó hace 145 millones de años y terminó hace 66 millones de años. Con una duración de unos
+                        79 millones de años, es el período Fanerozoico más extenso, y es, incluso, más largo que toda la
+                        Era Cenozoica. Su nombre proviene del latín creta, que significa "tiza".
+                    </p>
+                    <a name="" id="" class="btn btn-primary btn-md more" href="Cretacico.html" role="button">Ver mas</a>
+                    <div class="col-lg-10 col-md-11 col-sm-12 mx-auto">
+                        <div data-aos="fade-down">
+                            <img src="assets/img/dinos/Dinosaurs-bro.svg" class="fondodinos img-fluid" alt="">
                         </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <label for="Nombres" class="form-label"></label>
-                                        <input placeholder="Nombres" type="text" class="form-control" id="Nombres"
-                                            value="" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="apellido" class="form-label"></label>
-                                        <input type="text" class="form-control" id="apellido" placeholder="Apellidos"
-                                            value="" required>
-                                    </div>
-                                    <div class="">
-                                        <label for="" class="form-label"></label>
-                                        <input type="email" class="form-control" name="" id=""
-                                            aria-describedby="emailHelpId" placeholder="abc@mail.com">
-                                    </div>
-                                    <div class="">
-                                        <label for="Password" class="form-label"></label>
-                                        <input type="password" class="form-control" name="Password" id=""
-                                            placeholder="Contraseña">
-                                    </div>
-                                    <!-- DIA -->
-                                    <div class="col-md-4 mt-3">
-                                        <small id="" class="form-text text-muted pt-3">Fecha de nacimiento</small>
-                                        <select class="form-select form-select-md" name="" id="">
-                                            <option disabled selected>Dia</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
-                                            <option value="">6</option>
-                                            <option value="">7</option>
-                                            <option value="">8</option>
-                                            <option value="">9</option>
-                                            <option value="">10</option>
-                                            <option value="">11</option>
-                                            <option value="">12</option>
-                                            <option value="">13</option>
-                                            <option value="">14</option>
-                                            <option value="">15</option>
-                                            <option value="">16</option>
-                                            <option value="">17</option>
-                                            <option value="">18</option>
-                                            <option value="">19</option>
-                                            <option value="">20</option>
-                                            <option value="">21</option>
-                                            <option value="">22</option>
-                                            <option value="">23</option>
-                                            <option value="">24</option>
-                                            <option value="">25</option>
-                                            <option value="">26</option>
-                                            <option value="">27</option>
-                                            <option value="">28</option>
-                                            <option value="">29</option>
-                                            <option value="">30</option>
-                                            <option value="">31</option>
-                                        </select>
-                                    </div>
-                                    <!-- MES -->
-                                    <div class="col-md-4 mt-3">
-                                        <label for="" class="form-label"></label>
-                                        <select class="form-select form-select-md" name="" id="">
-                                            <option disabled selected>Mes</option>
-                                            <option value="">ene</option>
-                                            <option value="">feb</option>
-                                            <option value="">mar</option>
-                                            <option value="">abr</option>
-                                            <option value="">may</option>
-                                            <option value="">jun</option>
-                                            <option value="">jul</option>
-                                            <option value="">ago</option>
-                                            <option value="">sep</option>
-                                            <option value="">oct</option>
-                                            <option value="">nov</option>
-                                            <option value="">dec</option>
-                                        </select>
-
-                                    </div>
-                                    <!-- AÑO -->
-                                    <div class="col-md-4 mt-3">
-                                        <label for="" class="form-label"></label>
-                                        <select class="form-select form-select-md" name="" id="">
-                                            <option disabled selected>año</option>
-                                            <option value="">1901</option>
-                                            <option value="">1902</option>
-                                            <option value="">1903</option>
-                                            <option value="">1904</option>
-                                            <option value="">1905</option>
-                                            <option value="">1906</option>
-                                            <option value="">1907</option>
-                                            <option value="">1908</option>
-                                            <option value="">1909</option>
-                                            <option value="">1910</option>
-                                            <option value="">1911</option>
-                                            <option value="">1912</option>
-                                            <option value="">1913</option>
-                                            <option value="">1914</option>
-                                            <option value="">1915</option>
-                                            <option value="">1916</option>
-                                            <option value="">1917</option>
-                                            <option value="">1918</option>
-                                            <option value="">1919</option>
-                                            <option value="">1920</option>
-                                            <option value="">1921</option>
-                                            <option value="">1922</option>
-                                            <option value="">1923</option>
-                                            <option value="">1924</option>
-                                            <option value="">1925</option>
-                                            <option value="">1926</option>
-                                            <option value="">1927</option>
-                                            <option value="">1928</option>
-                                            <option value="">1929</option>
-                                            <option value="">1930</option>
-                                            <option value="">1931</option>
-                                            <option value="">1932</option>
-                                            <option value="">1933</option>
-                                            <option value="">1934</option>
-                                            <option value="">1935</option>
-                                            <option value="">1936</option>
-                                            <option value="">1937</option>
-                                            <option value="">1938</option>
-                                            <option value="">1939</option>
-                                            <option value="">1940</option>
-                                            <option value="">1941</option>
-                                            <option value="">1942</option>
-                                            <option value="">1943</option>
-                                            <option value="">1944</option>
-                                            <option value="">1945</option>
-                                            <option value="">1946</option>
-                                            <option value="">1947</option>
-                                            <option value="">1948</option>
-                                            <option value="">1949</option>
-                                            <option value="">1950</option>
-                                            <option value="">1951</option>
-                                            <option value="">1952</option>
-                                            <option value="">1953</option>
-                                            <option value="">1954</option>
-                                            <option value="">1955</option>
-                                            <option value="">1956</option>
-                                            <option value="">1957</option>
-                                            <option value="">1958</option>
-                                            <option value="">1959</option>
-                                            <option value="">1960</option>
-                                            <option value="">1961</option>
-                                            <option value="">1962</option>
-                                            <option value="">1963</option>
-                                            <option value="">1964</option>
-                                            <option value="">1965</option>
-                                            <option value="">1966</option>
-                                            <option value="">1967</option>
-                                            <option value="">1968</option>
-                                            <option value="">1969</option>
-                                            <option value="">1970</option>
-                                            <option value="">1971</option>
-                                            <option value="">1972</option>
-                                            <option value="">1973</option>
-                                            <option value="">1974</option>
-                                            <option value="">1975</option>
-                                            <option value="">1976</option>
-                                            <option value="">1977</option>
-                                            <option value="">1978</option>
-                                            <option value="">1979</option>
-                                            <option value="">1980</option>
-                                            <option value="">1981</option>
-                                            <option value="">1982</option>
-                                            <option value="">1983</option>
-                                            <option value="">1984</option>
-                                            <option value="">1985</option>
-                                            <option value="">1986</option>
-                                            <option value="">1987</option>
-                                            <option value="">1988</option>
-                                            <option value="">1989</option>
-                                            <option value="">1990</option>
-                                            <option value="">1991</option>
-                                            <option value="">1992</option>
-                                            <option value="">1993</option>
-                                            <option value="">1994</option>
-                                            <option value="">1995</option>
-                                            <option value="">1996</option>
-                                            <option value="">1997</option>
-                                            <option value="">1998</option>
-                                            <option value="">1999</option>
-                                            <option value="">2001</option>
-                                            <option value="">2002</option>
-                                            <option value="">2003</option>
-                                            <option value="">2004</option>
-                                            <option value="">2005</option>
-                                            <option value="">2006</option>
-                                            <option value="">2007</option>
-                                            <option value="">2008</option>
-                                            <option value="">2009</option>
-                                            <option value="">2010</option>
-                                            <option value="">2011</option>
-                                            <option value="">2012</option>
-                                            <option value="">2013</option>
-                                            <option value="">2014</option>
-                                            <option value="">2015</option>
-                                            <option value="">2016</option>
-                                            <option value="">2017</option>
-                                            <option value="">2018</option>
-                                            <option value="">2019</option>
-                                            <option value="">2020</option>
-                                            <option value="">2021</option>
-                                            <option value="">2022</option>
-                                            <option value="">2023</option>
-                                            <option value="">2024</option>
-                                        </select>
-                                    </div>
-                                    <small id="" class="text-muted pt-3">Al hacer clic en "Guardar", aceptas nuestras Condiciones, la Política de privacidad y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.</small>
-
+                        <div data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine"
+                            data-aos-duration="1300">
+                            <img src="assets/img/dinos/Dinosaurs-bro (1).svg" class="dinodos img-fluid" alt="">
+                        </div>
+                        <div data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine"
+                            data-aos-duration="1000">
+                            <img src="assets/img/dinos/Dinosaurs-bro (2).svg" class="dinouno img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 dinosaurio">
+                    <h3 class="d-flex justify-content-center  mb-3">Triásico</h3>
+                    <p>El Triásico es una división de la escala temporal geológica que pertenece a la Era Mesozoica;
+                        dentro de esta, el Triásico ocupa el primer lugar precediendo al Jurásico. Comenzó hace 251
+                        millones de años y acabó hace 201 millones de años.
+                    </p>
+                    <a name="" id="" class="btn btn-primary btn-md more" href="#" role="button">Ver mas</a>
+                    <div class="col-lg-10 col-md-11 col-sm-12 mx-auto">
+                        <div data-aos="fade-down">
+                            <img src="assets/img/dinos/Dinosaurs-amico.svg" class="fondodinos img-fluid" alt="">
+                        </div>
+                        <div data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine"
+                            data-aos-duration="1500">
+                            <img src="assets/img/dinos/Dinosaurs-amico (1).svg" class="dinodos img-fluid" alt="">
+                        </div>
+                        <div data-aos="fade-up" data-aos-offset="400" data-aos-easing="ease-in-sine"
+                            data-aos-duration="1100">
+                            <img src="assets/img/dinos/Dinosaurs-amico (2).svg" class="dinouno img-fluid" alt="">
+                        </div>
+                        <div data-aos="fade-up" data-aos-offset="400" data-aos-easing="ease-in-sine"
+                            data-aos-duration="800">
+                            <img src="assets/img/dinos/Dinosaurs-amico (3).svg" class="dinouno img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4 col-sm-12 dinosaurio bug">
+                    <h3 class="d-flex justify-content-center mb-3">Jurásico</h3>
+                    <p>El Jurásico es una división de la escala temporal geológica que pertenece a la Era Mesozoica;
+                        dentro de esta, el Jurásico ocupa el segundo lugar, siguiendo al Triásico y precediendo al
+                        Cretácico. Comenzó hace 201 millones de años y acabó hace 145 millones de años. Debe su nombre a
+                        la cadena montañosa del Jura, en los Alpes, lugar donde el geólogo prusiano Alexander von
+                        Humboldt identificó este sistema en 1795.
+                    </p>
+                    <a name="" id="" class="btn btn-primary btn-md more" href="#" role="button">Ver mas</a>
+                    <div class="col-lg-10 col-md-6 col-sm-12  centrado">
+                        <div data-aos="fade-down">
+                            <img src="assets/img/dinos/Dinosaurs-pana.svg" class="fondodinos img-fluid centrado"
+                                alt="fondo">
+                        </div>
+                        <div data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+                            <img src="assets/img/dinos/Dinosaurs-pana (1).svg" class="dinodos img-fluid centrado"
+                                alt="">
+                        </div>
+                        <div data-aos="fade-down" data-aos-offset="400" data-aos-easing="ease-in-sine"
+                            data-aos-duration="1100">
+                            <img src="assets/img/dinos/Dinosaurs-pana (2).svg" class="dinouno img-fluid centrado"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="border-top">
+            <section>
+                <div>
+                    <h2 class="d-flex justify-content-center pt-5">Contenido de interes</h2>
+                </div>
+                <div class="acordeones">
+                    <div class="accordion row accordion-flush" id="accordion">
+                        <div class="accordion-item bg-primary col-lg-6">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button bg-primary collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    La Era Mesozoica y sus 3 periodos
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionParent">
+                                <div class="accordion-body">
+                                    <iframe width="90%" height="500" src="https://www.youtube.com/embed/kif0kH_QY5I"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-success btn-guardar"
-                                data-bs-dismiss="modal">Guardar</button>
+                        <div class="accordion-item bg-primary col-lg-6">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button bg-primary collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    La extraña pareja de animales que compartió madriguera hace unos 250 millones de
+                                    años
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionParent">
+                                <div class="accordion-body row">
+                                    <video class="col-6" width="50%"
+                                        src="assets/video/Triassic-cuddle-animation-1080p.mp4" controls autoplay muted
+                                        loop></video>
+                                    <span class="d-inline-block col-5" tabindex="0" data-bs-toggle="popover"
+                                        data-bs-placement="bottom" data-bs-trigger="hover focus"
+                                        data-bs-content="Foto real"><img
+                                            src="https://noticiasdelaciencia.com/upload/img/periodico/img_14499.jpg"
+                                            class="img-fluid" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-primary">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button bg-primary collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Era eratema
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show"
+                                aria-labelledby="headingThree" data-bs-parent="#accordionParent">
+                                <div class="accordion-body">
+                                    <div class="table-responsive">
+                                        <table class="wikitable" style="font-size:95%;">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="border"><a
+                                                            href="https://es.wikipedia.org/wiki/Era_geol%C3%B3gica"
+                                                            title="Era geológica">Era</a><br><i><a
+                                                                href="https://es.wikipedia.org/wiki/Eratema"
+                                                                title="Eratema">Eratema</a></i>
+                                                    </th>
+                                                    <th class="border" colspan="2"><a
+                                                            href="https://es.wikipedia.org/wiki/Per%C3%ADodo_geol%C3%B3gico"
+                                                            title="Período geológico">Periodo</a><br><i>Sistema</i>
+                                                    </th>
+                                                    <th class="border">Época<br><i>Serie</i>
+                                                    </th>
+                                                    <th class="border">Edad<br><i><a
+                                                                href="https://es.wikipedia.org/wiki/Piso_(geolog%C3%ADa)"
+                                                                title="Piso (geología)">Piso</a></i>
+                                                    </th>
+                                                    <th class="border">Eventos relevantes
+                                                    </th>
+                                                    <th class="border">Inicio, en millones de años
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="30" style="background:rgb(103,197,202)"><a
+                                                            href="https://es.wikipedia.org/wiki/Mesozoico"
+                                                            class="mw-redirect" title="Mesozoico">Mesozoico</a>
+                                                    </td>
+                                                    <td rowspan="12" colspan="2" style="background:rgb(127,198,78)"><a
+                                                            href="https://es.wikipedia.org/wiki/Cret%C3%A1cico"
+                                                            title="Cretácico">Cretácico</a>
+                                                    </td>
+                                                    <td rowspan="6" style="background:rgb(166,216,74)"><a
+                                                            href="https://es.wikipedia.org/wiki/Cret%C3%A1cico_Superior"
+                                                            class="mw-redirect" title="Cretácico Superior">Superior /
+                                                            Tardío</a>
+                                                    </td>
+                                                    <td style="background:rgb(242,250,140)"><a
+                                                            href="https://es.wikipedia.org/wiki/Maastrichtiense"
+                                                            title="Maastrichtiense">Maastrichtiense</a>
+                                                    </td>
+                                                    <td rowspan="12">Proliferan las <a
+                                                            href="https://es.wikipedia.org/wiki/Planta_con_flor"
+                                                            class="mw-redirect" title="Planta con flor">plantas con
+                                                            flor</a> y nuevos tipos de <a
+                                                            href="https://es.wikipedia.org/wiki/Insecto"
+                                                            class="mw-redirect" title="Insecto">insectos</a>. Empiezan
+                                                        a aparecer peces <a
+                                                            href="https://es.wikipedia.org/wiki/Tele%C3%B3steo"
+                                                            class="mw-redirect" title="Teleósteo">teleósteos</a> más
+                                                        modernos. Son comunes <a
+                                                            href="https://es.wikipedia.org/wiki/Ammonite"
+                                                            class="mw-redirect" title="Ammonite">ammonites</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Belemnoidea"
+                                                            title="Belemnoidea">belemnites</a>,
+                                                        <a href="https://es.wikipedia.org/wiki/Bivalvia"
+                                                            title="Bivalvia">bivalvos</a> <a
+                                                            href="https://es.wikipedia.org/wiki/Rudista"
+                                                            class="mw-redirect" title="Rudista">rudistas</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Echinoidea"
+                                                            title="Echinoidea">equinoides</a> y <a
+                                                            href="https://es.wikipedia.org/wiki/Porifera"
+                                                            title="Porifera">esponjas</a>. Varios tipos de <a
+                                                            href="https://es.wikipedia.org/wiki/Dinosaurio"
+                                                            class="mw-redirect" title="Dinosaurio">dinosaurios</a> (como
+                                                        <a href="https://es.wikipedia.org/wiki/Tyrannosauridae"
+                                                            title="Tyrannosauridae">tiranosáuridos</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Titanosauridae"
+                                                            title="Titanosauridae">titanosáuridos</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Hadrosauridae"
+                                                            title="Hadrosauridae">hadrosáuridos</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Ceratopsidae"
+                                                            title="Ceratopsidae">ceratópsidos</a>,
+                                                        carcarodontosáuridos, espinosáuridos, dromeosáuridos,
+                                                        anquilosáuridos, abelisáuridos
+                                                        y estegosáuridos) evolucionaron en tierra, así como los <a
+                                                            href="https://es.wikipedia.org/wiki/Crocodilia"
+                                                            title="Crocodilia">cocodrilos
+                                                            modernos</a>; <a
+                                                            href="https://es.wikipedia.org/wiki/Mosasaurio"
+                                                            class="mw-redirect" title="Mosasaurio">mosasaurios</a>,
+                                                        pliosaurios y tiburones
+                                                        modernos aparecieron en el mar. Las aves primitivas remplazaron
+                                                        gradualmente a los
+                                                        <a href="https://es.wikipedia.org/wiki/Pterosaurio"
+                                                            class="mw-redirect" title="Pterosaurio">pterosaurios</a>.
+                                                        Aparecieron <a href="https://es.wikipedia.org/wiki/Monotrema"
+                                                            class="mw-redirect" title="Monotrema">monotremas</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Marsupial"
+                                                            class="mw-redirect" title="Marsupial">marsupiales</a> y
+                                                        mamíferos <a href="https://es.wikipedia.org/wiki/Eutheria"
+                                                            title="Eutheria">placentarios</a>. Ruptura de <a
+                                                            href="https://es.wikipedia.org/wiki/Gondwana"
+                                                            title="Gondwana">Gondwana</a>.
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(242,250,140)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>72,1±0,2</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(230,244,127)"><a
+                                                            href="https://es.wikipedia.org/wiki/Campaniaense"
+                                                            class="mw-redirect" title="Campaniaense">Campaniaense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(230,244,127)">
+                                                        <small>83,6±0,2</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(217,239,116)"><a
+                                                            href="https://es.wikipedia.org/wiki/Santoniense"
+                                                            title="Santoniense">Santoniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(217,239,116)">
+                                                        <small>86,3±0,5</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(204,233,104)"><a
+                                                            href="https://es.wikipedia.org/wiki/Coniaciense"
+                                                            title="Coniaciense">Coniaciense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(204,233,104)">
+                                                        <small>89,8±0,3</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(191,227,93)"><a
+                                                            href="https://es.wikipedia.org/wiki/Turoniense"
+                                                            title="Turoniense">Turoniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(191,227,93)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svg/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>93,9</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(179,222,83)"><a
+                                                            href="https://es.wikipedia.org/wiki/Cenomaniense"
+                                                            title="Cenomaniense">Cenomaniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(179,222,83)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>100,5</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="6" style="background:rgb(140,205,87)"><a
+                                                            href="https://es.wikipedia.org/wiki/Cret%C3%A1cico_Inferior"
+                                                            class="mw-redirect" title="Cretácico Inferior">Inferior /
+                                                            Temprano</a>
+                                                    </td>
+                                                    <td style="background:rgb(204,234,151)"><a
+                                                            href="https://es.wikipedia.org/wiki/Albiense"
+                                                            title="Albiense">Albiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(204,234,151)">
+                                                        <small>~113,0</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(191,228,138)"><a
+                                                            href="https://es.wikipedia.org/wiki/Aptiense"
+                                                            title="Aptiense">Aptiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(191,228,138)">
+                                                        <small>~125,0</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(179,223,127)"><a
+                                                            href="https://es.wikipedia.org/wiki/Barremiense"
+                                                            title="Barremiense">Barremiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(179,223,127)">
+                                                        <small>~129,4</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(166,217,117)"><a
+                                                            href="https://es.wikipedia.org/wiki/Hauteriviense"
+                                                            title="Hauteriviense">Hauteriviense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(166,217,117)">
+                                                        <small>~132,9</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(153,211,106)"><a
+                                                            href="https://es.wikipedia.org/wiki/Valanginiense"
+                                                            title="Valanginiense">Valanginiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(153,211,106)">
+                                                        <small>~139,8</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(140,205,96)"><a
+                                                            href="https://es.wikipedia.org/wiki/Berriasiense"
+                                                            title="Berriasiense">Berriasiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(140,205,96)">
+                                                        <small>~145,0±0,8</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="11" colspan="2" style="background:rgb(52,178,201)"><a
+                                                            href="https://es.wikipedia.org/wiki/Jur%C3%A1sico"
+                                                            title="Jurásico">Jurásico</a>
+                                                    </td>
+                                                    <td rowspan="3" style="background:rgb(179,227,238)"><a
+                                                            href="https://es.wikipedia.org/wiki/Jur%C3%A1sico_Superior"
+                                                            title="Jurásico Superior">Superior /
+                                                            Tardío</a>
+                                                    </td>
+                                                    <td style="background:rgb(217,241,247)"><a
+                                                            href="https://es.wikipedia.org/wiki/Titoniense"
+                                                            title="Titoniense">Titoniense</a>
+                                                    </td>
+                                                    <td rowspan="11">Son comunes <a
+                                                            href="https://es.wikipedia.org/wiki/Gimnosperma"
+                                                            class="mw-redirect" title="Gimnosperma">gimnospermas</a>
+                                                        (especialmente <a
+                                                            href="https://es.wikipedia.org/wiki/Con%C3%ADfera"
+                                                            class="mw-redirect" title="Conífera">coníferas</a>,
+                                                        <a href="https://es.wikipedia.org/wiki/Bennettitales"
+                                                            title="Bennettitales">Bennettitales</a> y <a
+                                                            href="https://es.wikipedia.org/wiki/Cycadidae"
+                                                            class="mw-redirect" title="Cycadidae">cicadas</a>) y <a
+                                                            href="https://es.wikipedia.org/wiki/Helecho"
+                                                            class="mw-redirect" title="Helecho">helechos</a>. Muchos
+                                                        tipos de <a href="https://es.wikipedia.org/wiki/Dinosaurio"
+                                                            class="mw-redirect" title="Dinosaurio">dinosaurios</a>, como
+                                                        <a href="https://es.wikipedia.org/wiki/Saur%C3%B3podo"
+                                                            class="mw-redirect" title="Saurópodo">saurópodos</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Carnosaurio"
+                                                            class="mw-redirect" title="Carnosaurio">carnosaurios</a>, y
+                                                        <a href="https://es.wikipedia.org/wiki/Estegosaurio"
+                                                            class="mw-redirect" title="Estegosaurio">estegosaurios</a>.
+                                                        Los mamíferos son
+                                                        comunes pero pequeños. Primeras <a
+                                                            href="https://es.wikipedia.org/wiki/Aves"
+                                                            title="Aves">aves</a> y <a
+                                                            href="https://es.wikipedia.org/wiki/Squamata"
+                                                            title="Squamata">lagartos</a>. <a
+                                                            href="https://es.wikipedia.org/wiki/Ictiosaurio"
+                                                            class="mw-redirect" title="Ictiosaurio">Ictiosaurios</a> y
+                                                        <a href="https://es.wikipedia.org/wiki/Plesiosaurio"
+                                                            class="mw-redirect" title="Plesiosaurio">plesiosaurios</a>
+                                                        se diversifican. <a
+                                                            href="https://es.wikipedia.org/wiki/Bivalvia"
+                                                            title="Bivalvia">Bivalvos</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Ammonite"
+                                                            class="mw-redirect" title="Ammonite">ammonites</a> y <a
+                                                            href="https://es.wikipedia.org/wiki/Belemnoidea"
+                                                            title="Belemnoidea">belemnites</a> abundan. Los <a
+                                                            href="https://es.wikipedia.org/wiki/Erizo_de_mar"
+                                                            class="mw-redirect" title="Erizo de mar">erizos de mar</a>
+                                                        son muy comunes,
+                                                        junto con <a href="https://es.wikipedia.org/wiki/Crinoidea"
+                                                            title="Crinoidea">crinoides</a>, <a
+                                                            href="https://es.wikipedia.org/wiki/Estrella_de_mar"
+                                                            class="mw-redirect" title="Estrella de mar">estrellas de
+                                                            mar</a>, <a href="https://es.wikipedia.org/wiki/Porifera"
+                                                            title="Porifera">esponjas</a>, y <a
+                                                            href="https://es.wikipedia.org/wiki/Braqui%C3%B3podo"
+                                                            class="mw-redirect" title="Braquiópodo">braquiópodos</a> <a
+                                                            href="https://es.wikipedia.org/wiki/Terebratulida"
+                                                            title="Terebratulida">terebratúlidos</a> y <a
+                                                            href="https://es.wikipedia.org/wiki/Rhynchonellida"
+                                                            title="Rhynchonellida">rinconélidos</a>. Ruptura de
+                                                        <a href="https://es.wikipedia.org/wiki/Pangea"
+                                                            title="Pangea">Pangea</a> en <a
+                                                            href="https://es.wikipedia.org/wiki/Gondwana"
+                                                            title="Gondwana">Gondwana</a> y <a
+                                                            href="https://es.wikipedia.org/wiki/Laurasia"
+                                                            title="Laurasia">Laurasia</a>.
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(217,241,247)">
+                                                        <small>152,1±0,9</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(204,236,244)"><a
+                                                            href="https://es.wikipedia.org/wiki/Kimmeridgiense"
+                                                            title="Kimmeridgiense">Kimmeridgiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(204,236,244)">
+                                                        <small>157,3±1,0</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(191,231,241)"><a
+                                                            href="https://es.wikipedia.org/wiki/Oxfordiense"
+                                                            title="Oxfordiense">Oxfordiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(191,231,241)">
+                                                        <small>163,5±1,0</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="4" style="background:rgb(128,207,216)"><a
+                                                            href="https://es.wikipedia.org/wiki/Jur%C3%A1sico_Medio"
+                                                            title="Jurásico Medio">Medio</a>
+                                                    </td>
+                                                    <td style="background:rgb(191,231,229)"><a
+                                                            href="https://es.wikipedia.org/wiki/Calloviense"
+                                                            title="Calloviense">Calloviense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(191,231,229)">
+                                                        <small>166,1±1,2</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(179,226,227)"><a
+                                                            href="https://es.wikipedia.org/wiki/Bathoniense"
+                                                            title="Bathoniense">Bathoniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(179,226,227)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>168,3±1,3</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(166,221,224)"><a
+                                                            href="https://es.wikipedia.org/wiki/Bajociense"
+                                                            title="Bajociense">Bajociense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(166,221,224)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>170,3±1,4</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(154,217,221)"><a
+                                                            href="https://es.wikipedia.org/wiki/Aaleniense"
+                                                            title="Aaleniense">Aaleniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(154,217,221)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>174,1±1,0</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="4" style="background:rgb(66,174,208)"><a
+                                                            href="https://es.wikipedia.org/wiki/Jur%C3%A1sico_Inferior"
+                                                            title="Jurásico Inferior"><span
+                                                                style="color:white;">Inferior / Temprano</span></a>
+                                                    </td>
+                                                    <td style="background:rgb(153,206,227)"><a
+                                                            href="https://es.wikipedia.org/wiki/Toarciense"
+                                                            title="Toarciense">Toarciense</a>
+                                                    </td>
+                                                    <td style="background:rgb(153,206,227)"><small>182,7±0,7</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(128,197,221)"><a
+                                                            href="https://es.wikipedia.org/wiki/Pliensbachiense"
+                                                            title="Pliensbachiense">Pliensbachiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(128,197,221)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>190,8±1,0</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(103,188,216)"><a
+                                                            href="https://es.wikipedia.org/wiki/Sinemuriense"
+                                                            title="Sinemuriense">Sinemuriense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(103,188,216)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>199,3±0,3</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(78,179,211)"><a
+                                                            href="https://es.wikipedia.org/wiki/Hettangiense"
+                                                            title="Hettangiense"><span
+                                                                style="color:white;">Hettangiense</span></a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(78,179,211)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37" data-file-height="59"></a> <span
+                                                            style="color:white"><small>201,3±0,2</small></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="7" colspan="2" style="background:rgb(129,43,146)"><a
+                                                            href="https://es.wikipedia.org/wiki/Tri%C3%A1sico"
+                                                            title="Triásico"><span
+                                                                style="color:white;">Triásico</span></a>
+                                                    </td>
+                                                    <td rowspan="3" style="background:rgb(189,140,195)"><a
+                                                            href="https://es.wikipedia.org/wiki/Tri%C3%A1sico_Superior"
+                                                            title="Triásico Superior">Superior /
+                                                            Tardío</a>
+                                                    </td>
+                                                    <td style="background:rgb(227,185,219)"><a
+                                                            href="https://es.wikipedia.org/wiki/Rhaetiense"
+                                                            title="Rhaetiense">Rhaetiense</a>
+                                                    </td>
+                                                    <td rowspan="7">Los <a
+                                                            href="https://es.wikipedia.org/wiki/Arcosaurio"
+                                                            class="mw-redirect" title="Arcosaurio">arcosaurios</a>
+                                                        dominan en tierra como <a
+                                                            href="https://es.wikipedia.org/wiki/Dinosaurio"
+                                                            class="mw-redirect" title="Dinosaurio">dinosaurios</a>,
+                                                        en los océanos como <a
+                                                            href="https://es.wikipedia.org/wiki/Ictiosaurio"
+                                                            class="mw-redirect" title="Ictiosaurio">ictiosaurios</a> y
+                                                        <a href="https://es.wikipedia.org/wiki/Notosaurio"
+                                                            class="mw-redirect" title="Notosaurio">notosaurios</a>, y en
+                                                        el cielo como <a
+                                                            href="https://es.wikipedia.org/wiki/Pterosaurio"
+                                                            class="mw-redirect" title="Pterosaurio">pterosaurios</a>.
+                                                        Los <a href="https://es.wikipedia.org/wiki/Cinodonto"
+                                                            class="mw-redirect" title="Cinodonto">cinodontos</a> se
+                                                        hacen más pequeños y se
+                                                        asemejan cada vez más a un <a
+                                                            href="https://es.wikipedia.org/wiki/Mam%C3%ADfero"
+                                                            class="mw-redirect" title="Mamífero">mamífero</a>. Aparecen
+                                                        los primeros mamíferos y el orden <a
+                                                            href="https://es.wikipedia.org/wiki/Crocodilia"
+                                                            title="Crocodilia">crocodilia</a>. Plantas del género
+                                                        <i><a href="https://es.wikipedia.org/wiki/Dicroidium"
+                                                                title="Dicroidium">Dicroidium</a></i> eran comunes en
+                                                        tierra. Muchos grandes <a
+                                                            href="https://es.wikipedia.org/wiki/Amphibia"
+                                                            title="Amphibia">anfibios</a>
+                                                        acuáticos <a
+                                                            href="https://es.wikipedia.org/wiki/Temnosp%C3%B3ndilo"
+                                                            class="mw-redirect"
+                                                            title="Temnospóndilo">temnospóndilos</a>. <a
+                                                            href="https://es.wikipedia.org/wiki/Ammonoideo"
+                                                            class="mw-redirect" title="Ammonoideo">Ammonoideos</a>
+                                                        ceratíticos
+                                                        extremadamente comunes. Aparecen los <a
+                                                            href="https://es.wikipedia.org/wiki/Coral_(animal)"
+                                                            class="mw-redirect" title="Coral (animal)">corales</a>
+                                                        modernos y los peces
+                                                        óseos (<a href="https://es.wikipedia.org/wiki/Tele%C3%B3steo"
+                                                            class="mw-redirect" title="Teleósteo">teleósteos</a>), así
+                                                        como muchos de los <a href="https://es.wikipedia.org/wiki/Clado"
+                                                            title="Clado">clados</a> modernos de <a
+                                                            href="https://es.wikipedia.org/wiki/Insecto"
+                                                            class="mw-redirect" title="Insecto">insectos</a>.
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(227,185,219)">
+                                                        <small>~208,5</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(214,170,211)"><a
+                                                            href="https://es.wikipedia.org/wiki/Noriense"
+                                                            title="Noriense">Noriense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(214,170,211)">
+                                                        <small>~228</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(201,155,203)"><a
+                                                            href="https://es.wikipedia.org/wiki/Carniense"
+                                                            title="Carniense">Carniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(201,155,203)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>~235</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" style="background:rgb(177,104,177)"><a
+                                                            href="https://es.wikipedia.org/wiki/Tri%C3%A1sico_Medio"
+                                                            title="Triásico Medio"><span
+                                                                style="color:white;">Medio</span></a>
+                                                    </td>
+                                                    <td style="background:rgb(201,131,191)"><a
+                                                            href="https://es.wikipedia.org/wiki/Ladiniense"
+                                                            title="Ladiniense">Ladiniense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(201,131,191)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37"
+                                                                data-file-height="59"></a><small>~242</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(188,117,183)"><a
+                                                            href="https://es.wikipedia.org/wiki/Anisiense"
+                                                            title="Anisiense">Anisiense</a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(188,117,183)">
+                                                        <small>247,2</small>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" style="background:rgb(152,57,153)"><a
+                                                            href="https://es.wikipedia.org/wiki/Tri%C3%A1sico_Inferior"
+                                                            title="Triásico Inferior"><span
+                                                                style="color:white;">Inferior / Temprano</span></a>
+                                                    </td>
+                                                    <td style="background:rgb(176,81,165)"><a
+                                                            href="https://es.wikipedia.org/wiki/Olenekiense"
+                                                            title="Olenekiense"><span
+                                                                style="color:white;">Olenekiense</span></a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(176,81,165)"><span
+                                                            style="color:white"><small>251,2</small></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background:rgb(164,70,159)"><a
+                                                            href="https://es.wikipedia.org/wiki/Induense"
+                                                            title="Induense"><span
+                                                                style="color:white;">Induense</span></a>
+                                                    </td>
+                                                    <td valign="bottom" style="background:rgb(164,70,159)"><a
+                                                            href="//commons.wikimedia.org/wiki/File:Clavo_dorado.svghttps://es.wikipedia.org/wiki/File:Clavo_dorado.svg"
+                                                            class="image"><img alt="Clavo dorado.svg"
+                                                                src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/10px-Clavo_dorado.svg.png"
+                                                                decoding="async" width="10" height="16"
+                                                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/15px-Clavo_dorado.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Clavo_dorado.svg/20px-Clavo_dorado.svg.png 2x"
+                                                                data-file-width="37" data-file-height="59"></a><span
+                                                            style="color:white"><small>252,2±0,5</small></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </form>
+
+                    <div class="py-5">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <h3 class="d-flex justify-content-center dinoEle">Dinosaurios Elegantes</h3>
+        <section class="cartas py-5 row">
+            <div class="card my-2  col-lg-5">
+                <div class="row g-0">
+                    <div class="col-md-4 p-1">
+                        <img src="https://dinosaurioss.com/wp-content/uploads/2017/09/triceratops-200x133.jpg" class="img-fluid rounded-start" alt="...">
+                        <p class="atributosD"><b>Nombre:</b> Triceratops</p>
+                        <p class="atributosD"><b>Dieta:</b> Herbívora</p>
+                        <p class="atributosD"><b>Peso:</b> 7 toneladas</p>
+                        <p class="atributosD"><b>Periodo:</b> Cretácico Superior</p>
+                        <p class="atributosD"><b>Encontrado En:</b> USA</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Triceratops</b></h5>
+                            <p class="card-text">El Triceratops es un género que engloba al menos dos especies de ornitisquios ceratopsianos que vivieron a finales del período Cretácico, en la actual Norte América, por lo que se encontraban en el continente Laurasia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-2 ms-lg-auto col-lg-5" >
+                <div class="row g-0">
+                    <div class="col-md-4 p-1">
+                        <img src="https://dinosaurioss.com/wp-content/uploads/2017/05/Ankylosaurus-200x133.jpg" class="img-fluid rounded-start" alt="...">
+                        <p class="atributosD"><b>Nombre:</b> Ankylosaurus</p>
+                        <p class="atributosD"><b>Dieta:</b> Herbívora</p>
+                        <p class="atributosD"><b>Peso:</b> 8 toneladas</p>
+                        <p class="atributosD"><b>Periodo:</b> Cretácico Superior</p>
+                        <p class="atributosD"><b>Encontrado En:</b> USA</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Ankylosaurus</b></h5>
+                            <p class="card-text">El Ankylosaurus es uno de los dinosaurios más interesantes que han existido. El motivo es sencillo: la impresionante armadura que lo recubría. De hecho, está considerado como el espécimen acorazado más relevante.
+                            </p>
+                                <p>
+                                Este dinosaurio poseía una armadura natural que lo convertía en un tanque andante. Buena prueba de ello es su propio nombre, Ankylosaurus significa, en griego, «lagarto acorazado».
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-2 col-lg-5">
+                <div class="row g-0">
+                    <div class="col-md-4 p-1">
+                        <img src="https://dinosaurioss.com/wp-content/uploads/2017/09/spinosaurus-200x133.jpg" class="img-fluid rounded-start" alt="...">
+                        <p class="atributosD"><b>Nombre:</b> Ankylosaurus</p>
+                        <p class="atributosD"><b>Dieta:</b> Herbívora</p>
+                        <p class="atributosD"><b>Peso:</b> 8 toneladas</p>
+                        <p class="atributosD"><b>Periodo:</b> Cretácico Superior</p>
+                        <p class="atributosD"><b>Encontrado En:</b> USA</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Ankylosaurus </b></h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-2 col-lg-5 ms-lg-auto">
+                <div class="row g-0">
+                    <div class="col-md-4 p-1">
+                        <img src="https://dinosaurioss.com/wp-content/uploads/2017/09/allosaurus-200x133.jpg" class="img-fluid rounded-start" alt="...">
+                        <p class="atributosD"><b>Nombre:</b> Triceratops</p>
+                        <p class="atributosD"><b>Dieta:</b> Herbívora</p>
+                        <p class="atributosD"><b>Peso:</b> 7 toneladas</p>
+                        <p class="atributosD"><b>Periodo:</b> Cretácico Superior</p>
+                        <p class="atributosD"><b>Encontrado En:</b> USA</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Triceratops</b></h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-2 col-lg-7 mx-auto">
+                <div class="row g-0">
+                    <div class="col-md-4 p-1">
+                        <img src="https://dinosaurioss.com/wp-content/uploads/2017/09/baryonyx-200x133.jpg" class="img-fluid rounded-start" alt="...">
+                        <p class="atributosD"><b>Nombre:</b> Triceratops</p>
+                        <p class="atributosD"><b>Dieta:</b> Herbívora</p>
+                        <p class="atributosD"><b>Peso:</b> 7 toneladas</p>
+                        <p class="atributosD"><b>Periodo:</b> Cretácico Superior</p>
+                        <p class="atributosD"><b>Encontrado En:</b> USA</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Triceratops</b></h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <button type="button" class="like" id="liveToastBtn"><span>LIKE</span></button>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="assets/img/icon/icons8-kawaii-dinosaur-100.png" class="rounded me-2 img-toast"
+                            alt="...">
+                        <strong class="me-auto">Ahora eres un pana mas</strong>
+                        <small>1 second ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-auto">
+        <div class="container d-flex justify-content-center">
+            <div class="row py-5">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <img src="assets/img/user/FotoPerfil.jpg" class="img-profile" alt=".|.">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-2 pt-4">
+                            <h6 class="ml7">
+                                <span class="text-wrapper">
+                                    <span class="letters">By Julian Vasquez</span>
+                                </span>
+                            </h6>
+                            <a href="https://github.com/Midnightgb" target="_blank"><img
+                                    src="assets/img/icon/icons8-github.svg" width="15%" alt=""></a>
+                            <a href="https://www.instagram.com/julianvm2.0/?hl=es" target="_blank"><img
+                                    src="assets/img/icon/icons8-instagram.svg" width="15%" alt=""></a>
+                            <a href="https://twitter.com/Midnight_gb" target="_blank"><img
+                                    src="assets/img/icon/icons8-twitter.svg" width="15%" alt=""></a>
+                            <a class="enlace" href="https://github.com/Midnightgb" target="_blank">@Midnightgb</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-4 pt-4 bordediv">
+                    <h6 class="borde">Obtener notificaciones</h6>
+                    <div class="input-group">
+                        <input type="email" class="input" id="Email" name="Email" placeholder="1234@email.com"
+                            autocomplete="off">
+                        <input class="button--submit" value="Subscribe" type="submit">
+                    </div>
+                </div>
             </div>
         </div>
+    </footer>
 
-    </section>
+
+
     <script src="modulos/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="modulos/aos/dist/aos.js"></script>
     <script src="js/nightmode.js"></script>
+    <script src="js/popover.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/writter.js"></script>
     <script>
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-            return new bootstrap.Popover(popoverTriggerEl)
-        })
-    </script>
-    <script>
-        var modalId = document.getElementById('modalId');
-
-        modalId.addEventListener('show.bs.modal', function (event) {
-            let button = event.relatedTarget;
-            let recipient = button.getAttribute('data-bs-whatever');
-        });
+        AOS.init();
     </script>
 </body>
 
