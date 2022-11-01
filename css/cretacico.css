@@ -16,10 +16,37 @@ article {
     border-bottom: 3px solid #5CB8E4;
     margin-bottom: .5em;
 }
+
+h1,h2,h3{
+    border-bottom: 3px solid #5CB8E4;
+}
 .botonalt{
     margin-top: 2em;
     z-index: 5;
 }
+td>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--Csecundario);
+}
+
+th>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--Cprincipal);
+}
+
+th {
+    padding: 1em;
+    background: var(--Coscuro);
+    border: 1px solid lightgrey;
+}
+
+td {
+    padding: .5em;
+    background: var(--Coscuro);
+}
+
 .like {
     padding: 0 20px 0 10px;
     border-radius: 10px;

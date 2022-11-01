@@ -25,7 +25,9 @@
 .oscuro div>h3 {
     border-bottom: 4px solid #8758FF;
 }
-
+.oscuro th, .oscuro td{
+    color: var(--Cblanco);
+}
 .oscuro article {
     background: #ff723c;
     color: #181818;
